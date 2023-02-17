@@ -36,8 +36,10 @@ function age(givendate, principal, rate, type) {
     let A = principal * Math.pow(1 + (rate * 12) / 100, y);
     let CI = A - principal;
     let remaining = ((m * 30 + d) * rate * A) / 3000;
-    total = CI + remaining;
+    interest = CI + remaining;
   }
+
+  total = interest + principal;
 
   return {
     duration,
@@ -46,4 +48,11 @@ function age(givendate, principal, rate, type) {
   };
 }
 
-console.log(age("23/1/2022", 200000, 2, "Compound"));
+console.log(age("24/6/2020", 1100000, 1.5, "Compound"));
+
+// Devi reddy konda reddy
+// 501747
+// 357925
+// ------
+// 143822
+// ------
